@@ -17,7 +17,6 @@ export class ArticleComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.blogService.getBlogById(params['id']).subscribe((article) => {
-        debugger;
         this.article = article;
       });
     });
