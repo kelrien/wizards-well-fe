@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { BlogItem, StrapiItem, StrapiResponse } from '../domain-models.model';
+import { BlogItem, ImprintItem, StrapiItem, StrapiResponse } from '../domain-models.model';
 import { Observable, map } from 'rxjs';
 
 @Injectable({
@@ -43,6 +43,17 @@ export class ArticleServiceService {
           };
         })
       );
+  }
+
+  getImprint(): Observable<ImprintItem> {
+    return this.http.get<any>(`${environment.API_BASE_URL}/api/impressum`).pipe(
+      map((item) => {
+        return {
+          id: item.id,
+          text: item.data.attributes.text
+        }
+      })
+    )
   }
 
   private mapResponseToBlogs(response: StrapiResponse): BlogItem[] {
