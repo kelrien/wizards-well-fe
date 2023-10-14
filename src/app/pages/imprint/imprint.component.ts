@@ -18,7 +18,6 @@ export class ImprintComponent implements OnInit {
     this.imprint$ = this.articleService.getImprint();
     this.imprint$.subscribe(item => {
       this.imprint = item;
-      debugger;
     })
   }
 }
