@@ -16,8 +16,6 @@ export class ImprintComponent implements OnInit {
 
   ngOnInit(): void {
     this.imprint$ = this.articleService.getImprint();
-    this.imprint$.subscribe(item => {
-      this.imprint = item;
-    })
+    this.imprint$.subscribe()
   }
 }

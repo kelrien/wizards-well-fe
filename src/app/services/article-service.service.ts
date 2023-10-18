@@ -56,6 +56,17 @@ export class ArticleServiceService {
     )
   }
 
+  getContact(): Observable<any>{
+    return this.http.get<any>(`${environment.API_BASE_URL}/api/kontakt`).pipe(
+      map((item) => {
+        return {
+          id: item.id,
+          content: item.data.attributes.content
+        }
+      })
+    )
+  }
+
   private mapResponseToBlogs(response: StrapiResponse): BlogItem[] {
     const result = response.data.map<BlogItem>((item) => {
       var imageUrl = '';
