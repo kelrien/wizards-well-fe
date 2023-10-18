@@ -9,6 +9,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { ArticleComponent } from './pages/article/article.component';
+import { SafeHtmlPipe } from './safe-html.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ArticleComponent } from './pages/article/article.component';
     ContactComponent,
     BlogCardComponent,
     ArticleComponent,
+    SafeHtmlPipe,
   ],
   imports: [
     BrowserModule,

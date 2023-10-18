@@ -1,4 +1,4 @@
 <div
   class="markdown"
-  [innerHTML]="(imprint$	| async)?.text"
+  [innerHTML]="((imprint$	| async)?.text) | safeHtml"
 ></div>
