@@ -8,7 +8,6 @@ import { ArticleServiceService } from 'src/app/services/article-service.service'
 })
 export class MainComponent implements OnInit {
   articles: BlogItem[] = [];
-
   constructor(private articleService: ArticleServiceService) {}
 
   ngOnInit(): void {

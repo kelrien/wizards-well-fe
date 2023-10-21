@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { ArticleComponent } from './pages/article/article.component';
 import { SafeHtmlPipe } from './safe-html.pipe';
+import { SocialsItemComponent } from './components/socials-item/socials-item.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SafeHtmlPipe } from './safe-html.pipe';
     BlogCardComponent,
     ArticleComponent,
     SafeHtmlPipe,
+    SocialsItemComponent,
   ],
   imports: [
     BrowserModule,

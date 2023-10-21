@@ -67,6 +67,15 @@ export class ArticleServiceService {
     )
   }
 
+  getSocials(): Observable<BlogItem[]>{
+    return this.http
+      .get<StrapiResponse>(
+        environment.API_BASE_URL +
+          '/api/wizards-well-items?filters[type][$eq]=Link&populate[0]=tileImage'
+      )
+      .pipe(map((response) => this.mapResponseToBlogs(response)));
+  }
+
   private mapResponseToBlogs(response: StrapiResponse): BlogItem[] {
     const result = response.data.map<BlogItem>((item) => {
       var imageUrl = '';
