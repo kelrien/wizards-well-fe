@@ -16,6 +16,7 @@ export type StrapiItem = {
   attributes: {
     title: string;
     content: string;
+    text: string;
     createdAt: Date;
     updatedAt: Date;
     publishedAt: Date;
@@ -39,11 +40,16 @@ export type BlogItem = {
   imageUrl: string;
 };
 
-export type SocialMediaItem = {};
+export type ImprintItem = {
+  id: Number
+  text: string;
+}
 
-// "title": "Test",
-// "content": "# Hallo Welt\nwww.heise.de\n\n![5786664.png](https://strapi.beedgen.net/uploads/5786664_1e512b5d0b.png)",
-// "type": "Blog",
-// "createdAt": "2023-04-24T10:33:24.994Z",
-// "updatedAt": "2023-07-20T16:11:33.940Z",
-// "publishedAt": "2023-04-24T10:33:43.763Z"
+export type SocialMediaItem = {
+  id: Number;
+  title: string;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date;
+  imageUrl: string;
+};

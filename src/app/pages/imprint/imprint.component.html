@@ -1,1 +1,4 @@
-<p>imprint works!</p>
+<div
+  class="markdown"
+  [innerHTML]="((imprint$	| async)?.text) | safeHtml"
+></div>
