@@ -2,7 +2,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html, body {
+    height: 100vh !important;
+}
+
 .markdown {
+ 
     h1 { 
         display: block;
         font-size: 2em;
