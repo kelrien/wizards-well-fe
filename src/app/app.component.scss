@@ -2,6 +2,13 @@
     border-bottom: 2px solid #a1a1a1;
 }
 
+.ww-bg {
+    background-image: url('../assets/wizardswell.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 header {
     position: sticky;
     top:0;

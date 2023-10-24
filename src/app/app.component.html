@@ -1,49 +1,50 @@
 <div class="flex flex-col h-full">
-<header>
-  <nav
-    class="px-4 flex items-center justify-center bg-gray-600 py-4 text-slate-400"
-  >
-    <strong class="text-slate-50 w-full sm:w-1/3 md:text-2xl">Wizards Well</strong>
-    <div class="flex w-1/3 justify-center">
-      <a
-        class="px-2 md:text-lg"
-        routerLink="/home"
-        routerLinkActive="text-slate-50"
-        ariaCurrentWhenActive="page"
-        >Home</a
+  <header>
+    <nav
+      class="px-4 flex items-center justify-center bg-gray-600 py-4 text-slate-400"
+    >
+      <strong class="text-slate-50 w-full sm:w-1/3 md:text-2xl"
+        >Wizards Well</strong
       >
-      <a
-        class="px-2 md:text-lg"
-        routerLink="/imprint"
-        routerLinkActive="text-slate-50"
-        ariaCurrentWhenActive="page"
-        >Impressum</a
-      >
-      <a
-        class="px-2 md:text-lg"
-        routerLink="/contact"
-        routerLinkActive="text-slate-50"
-        ariaCurrentWhenActive="page"
-        >Kontakt</a
-      >
-    </div>
+      <div class="flex w-1/3 justify-center">
+        <a
+          class="px-2 md:text-lg"
+          routerLink="/home"
+          routerLinkActive="text-slate-50"
+          ariaCurrentWhenActive="page"
+          >Home</a
+        >
+        <a
+          class="px-2 md:text-lg"
+          routerLink="/imprint"
+          routerLinkActive="text-slate-50"
+          ariaCurrentWhenActive="page"
+          >Impressum</a
+        >
+        <a
+          class="px-2 md:text-lg"
+          routerLink="/contact"
+          routerLinkActive="text-slate-50"
+          ariaCurrentWhenActive="page"
+          >Kontakt</a
+        >
+      </div>
 
-    <div class="w-1/3 flex flex-row-reverse">
+      <div class="w-1/3 flex flex-row-reverse"></div>
+    </nav>
+  </header>
+  <main class="flex-grow ww-bg">
+    <div class="container max-w-7xl mx-auto px-4 pb-5">
+      <router-outlet></router-outlet>
     </div>
-  </nav>
-</header>
-<main class="flex-grow">
-  <div class="container max-w-7xl mx-auto px-4 py-20">
-    <router-outlet></router-outlet>
-  </div>
-</main>
-<footer class="flex justify-center bg-gray-600 py-3">
-  <app-socials-item
-        class="social mx-4"
-        *ngFor="let social of socials"
-        [text]="social.title"
-        [image]="social.imageUrl"
-        [link]="social.content"
-      ></app-socials-item>
-</footer>
+  </main>
+  <footer class="flex justify-center bg-gray-600 py-3">
+    <app-socials-item
+      class="social mx-4"
+      *ngFor="let social of socials"
+      [text]="social.title"
+      [image]="social.imageUrl"
+      [link]="social.content"
+    ></app-socials-item>
+  </footer>
 </div>
